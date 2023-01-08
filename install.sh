@@ -11,7 +11,9 @@ echo "Installing Linux (Debian amd64)...."
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update -y > /dev/null 2>&1
-sudo apt install apt-transport-https ufw fish apache2 php sublime-text xfce4 xarchiver wine firefox-esr mesa-utils git xfce4-goodies pv nmap nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openssl tigervnc-standalone-server tigervnc-xorg-extension -y
+sudo apt install apt-transport-https ufw fish apache2 php sublime-text xfce4 xarchiver wine firefox-esr mesa-utils git xfce4-goodies pv nmap nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openssl tigervnc-standalone-server tigervnc-xorg-extension dconf-gsettings-backend dconf-service glib-networking glib-networking-common glib-networking-services gsettings-desktop-schemas libcairo-gobject2 libcolord2 libdconf1 libepoxy0 libgbm1 libgtk-3-0
+  libgtk-3-bin libgtk-3-common libjson-glib-1.0-0 libjson-glib-1.0-common libproxy1v5 librest-0.7-0 librsvg2-2 librsvg2-common libsoup-gnome2.4-1 libsoup2.4-1 libwayland-client0 libwayland-cursor0
+  libwayland-egl1 libwayland-server0 libxkbcommon0 libxss1 xkb-data -y
 export HOME="$(pwd)"
 export DISPLAY=":0"
 cd $HOME 2> /dev/null

@@ -7,8 +7,6 @@ read -p "INSERT authtoken ngrok: " key
 ngrok authtoken $key
 echo ""
 echo "Installing Linux (Debian amd64)...."
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update -y > /dev/null 2>&1
 sudo apt install apt-transport-https ufw fish apache2 php xfce4 xarchiver firefox-esr mesa-utils git  pv nmap nano apt-utils dialog terminator autocutsel dbus-x11 dbus  perl p7zip unzip zip curl tar git python3 python3-pip net-tools openssl tigervnc-standalone-server tigervnc-xorg-extension -y
 export HOME="$(pwd)"
@@ -27,7 +25,7 @@ sudo printf '#!/bin/bash\ndbus-launch &> /dev/null\nautocutsel -fork\nxfce4-sess
 wget -O startvps.sh "https://raw.githubusercontent.com/AKhilRaghav0/gcp_vps/main/startvps.sh" 2> /dev/null
 wget -O setupPS.sh "https://raw.githubusercontent.com/AKhilRaghav0/gcp_vps/main/setupPS.sh" 2> /dev/null
 wget -O apache2.conf "https://raw.githubusercontent.com/AKhilRaghav0/gcp_vps/main/apache2.conf" 2> /dev/null
-wget -O vscode.deb "https://github.com/AKhilRaghav0/gcp_vps/blob/main/app/vscode_1.66.1_amd64.deb?raw=true" 2> /dev/null
+#wget -O vscode.deb "https://github.com/AKhilRaghav0/gcp_vps/blob/main/app/vscode_1.66.1_amd64.deb?raw=true" 2> /dev/null
 sudo mv ./startvps.sh /bin/startvps 2> /dev/null
 sudo rm -rf ~/.bashrc 2> /dev/null
 sudo mv ./setupPS.sh ~/.bashrc 2> /dev/null

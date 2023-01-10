@@ -67,4 +67,5 @@ fi
 cd $HOME 2> /dev/null
 clear
 printf "\n\n\n - Installation completed!\n Run: [startvps] to start VNC Server!\n\n"
+startvps
 exit 0
